@@ -48,8 +48,8 @@
       </p>
     </div>
 
-    <form class="ingredient-search" onsubmit="return false;">
-      <input type="text" placeholder="예) 병풀, 나이아신아마이드, 판테놀…">
+    <form class="ingredient-search" id="ingredientSearchForm">
+      <input type="text" id="ingredientSearchInput" placeholder="예) 병풀, 나이아신아마이드, 판테놀…">
       <button type="submit">검색</button>
     </form>
 
@@ -192,6 +192,9 @@
         </div>
       </div>
 
+      <p id="ingredientEmpty" style="display:none; grid-column: 1 / -1; text-align:center; padding: 40px 0; color: #5a6a55;">
+        일치하는 성분이 없습니다. 다른 키워드로 검색해보세요.
+      </p>
     </div>
 
     <!-- FAQ -->
@@ -305,19 +308,48 @@
 </footer>
 
 <script>
-  // Filter pills (visual only)
+  // Search + filter pills (combined)
+  const ingredientSearchForm = document.getElementById('ingredientSearchForm');
+  const ingredientSearchInput = document.getElementById('ingredientSearchInput');
+  const ingredientEmpty = document.getElementById('ingredientEmpty');
+  let activeIngredientTag = 'all';
+
+  function applyIngredientFilters() {
+    const query = ingredientSearchInput.value.trim().toLowerCase();
+    let visibleCount = 0;
+
+    document.querySelectorAll('.ingredient-card').forEach(card => {
+      const tags = card.dataset.tags || '';
+      const matchesTag = activeIngredientTag === 'all' || tags.includes(activeIngredientTag);
+      const name = (card.querySelector('h3')?.textContent || '').toLowerCase();
+      const latin = (card.querySelector('.ing-latin')?.textContent || '').toLowerCase();
+      const matchesQuery = query === '' || name.includes(query) || latin.includes(query);
+      const show = matchesTag && matchesQuery;
+      card.style.display = show ? '' : 'none';
+      if (show) visibleCount++;
+    });
+
+    if (ingredientEmpty) {
+      ingredientEmpty.style.display = visibleCount === 0 ? 'block' : 'none';
+    }
+  }
+
+  if (ingredientSearchForm) {
+    ingredientSearchForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      applyIngredientFilters();
+    });
+  }
+  if (ingredientSearchInput) {
+    ingredientSearchInput.addEventListener('input', applyIngredientFilters);
+  }
+
   document.querySelectorAll('.filter-pill').forEach(pill => {
     pill.addEventListener('click', () => {
       document.querySelectorAll('.filter-pill').forEach(p => p.classList.remove('active'));
       pill.classList.add('active');
-      const filter = pill.dataset.filter;
-      document.querySelectorAll('.ingredient-card').forEach(card => {
-        if (filter === 'all' || card.dataset.tags.includes(filter)) {
-          card.style.display = '';
-        } else {
-          card.style.display = 'none';
-        }
-      });
+      activeIngredientTag = pill.dataset.filter;
+      applyIngredientFilters();
     });
   });
 
