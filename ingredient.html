@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>INGREDIENT DICTIONARY | VERDÉ — Forest Recovery</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="announcement-bar">FREE SHIPPING ON ORDERS OVER ₩50,000 · 리필 구독 시 최대 15% 할인</div>
+
+<header class="site-header">
+  <div class="nav-wrap">
+    <a href="index.html" class="logo">VERDÉ</a>
+    <nav class="main-nav">
+      <a href="brand.html">BRAND</a>
+      <a href="ingredient.html" class="active">INGREDIENT</a>
+      <a href="shop.html">SHOP</a>
+      <a href="journal.html">JOURNAL</a>
+      <a href="membership.html">MEMBERSHIP</a>
+    </nav>
+    <button class="mobile-toggle" aria-label="메뉴 열기" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- Page Hero -->
+<section id="main" class="page-hero">
+  <img src="images/ingredient-hero.jpeg" alt="VERDÉ Ingredient Dictionary">
+  <div class="page-hero-content">
+    <span class="section-eyebrow">Ingredient Dictionary</span>
+    <h1>성분 사전</h1>
+    <div class="breadcrumb"><a href="index.html">HOME</a> / INGREDIENT</div>
+  </div>
+</section>
+
+<!-- Search -->
+<section class="section">
+  <div class="container">
+    <div class="section-head center">
+      <span class="section-eyebrow">Search</span>
+      <h2 class="section-title">성분을 검색해보세요</h2>
+      <p class="section-desc">
+        성분명을 입력하면 역할, 추출 원료, 민감성 피부 적합도, 그리고
+        해당 성분이 포함된 제품까지 한번에 확인할 수 있습니다.
+      </p>
+    </div>
+
+    <form class="ingredient-search" onsubmit="return false;">
+      <input type="text" placeholder="예) 병풀, 나이아신아마이드, 판테놀…">
+      <button type="submit">검색</button>
+    </form>
+
+    <div class="filter-pills">
+      <button class="filter-pill active" data-filter="all">전체</button>
+      <button class="filter-pill" data-filter="soothing">진정</button>
+      <button class="filter-pill" data-filter="moisture">보습</button>
+      <button class="filter-pill" data-filter="barrier">장벽 강화</button>
+      <button class="filter-pill" data-filter="antioxidant">항산화</button>
+    </div>
+
+    <!-- Ingredient Grid -->
+    <div class="ingredient-grid">
+
+      <div class="ingredient-card" data-tags="soothing barrier">
+        <div class="ic-img"><img loading="lazy" decoding="async" src="images/toner-scene2.jpeg" alt="병풀"></div>
+        <div class="ic-body">
+          <span class="ic-number">TODAY'S INGREDIENT · No. 014</span>
+          <h3>병풀</h3>
+          <span class="ing-latin">Centella Asiatica</span>
+          <div class="ic-role">
+            <span>진정</span>
+            <span>재생</span>
+            <span>장벽 강화</span>
+          </div>
+          <p class="ic-desc">
+            손상된 피부 장벽을 진정시키고 재생을 돕는 대표적인 클린 뷰티 성분.
+            VERDÉ TONER와 AMPOULE의 핵심 베이스입니다.
+          </p>
+          <div class="ic-foot">
+            <span class="ic-fit">민감성 적합도 ★★★★★</span>
+            <a href="shop.html">제품 보기 →</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="ingredient-card" data-tags="moisture soothing">
+        <div class="ic-img"><img loading="lazy" decoding="async" src="images/cream-scene2.jpeg" alt="판테놀"></div>
+        <div class="ic-body">
+          <span class="ic-number">No. 021</span>
+          <h3>판테놀</h3>
+          <span class="ing-latin">Panthenol (Pro-Vitamin B5)</span>
+          <div class="ic-role">
+            <span>보습</span>
+            <span>진정</span>
+          </div>
+          <p class="ic-desc">
+            수분을 끌어당겨 피부 표면을 부드럽게 유지하고, 자극받은 피부를
+            진정시키는 데 도움을 줍니다. AMPOULE과 BARRIER CREAM에 함유.
+          </p>
+          <div class="ic-foot">
+            <span class="ic-fit">민감성 적합도 ★★★★★</span>
+            <a href="shop.html">제품 보기 →</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="ingredient-card" data-tags="barrier antioxidant">
+        <div class="ic-img"><img loading="lazy" decoding="async" src="images/ampoule-scene1.jpeg" alt="나이아신아마이드"></div>
+        <div class="ic-body">
+          <span class="ic-number">No. 028</span>
+          <h3>나이아신아마이드</h3>
+          <span class="ing-latin">Niacinamide</span>
+          <div class="ic-role">
+            <span>톤 정돈</span>
+            <span>장벽 강화</span>
+          </div>
+          <p class="ic-desc">
+            피부 장벽을 강화하고 칙칙한 톤을 정돈하는 데 도움을 주는 성분.
+            VERDÉ AMPOULE에 병풀과 함께 배합되어 시너지를 냅니다.
+          </p>
+          <div class="ic-foot">
+            <span class="ic-fit">민감성 적합도 ★★★★☆</span>
+            <a href="shop.html">제품 보기 →</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="ingredient-card" data-tags="moisture antioxidant">
+        <div class="ic-img"><img loading="lazy" decoding="async" src="images/cream-scene1.jpeg" alt="로즈힙 오일"></div>
+        <div class="ic-body">
+          <span class="ic-number">No. 033</span>
+          <h3>로즈힙 오일</h3>
+          <span class="ing-latin">Rosa Canina Fruit Oil</span>
+          <div class="ic-role">
+            <span>영양</span>
+            <span>탄력</span>
+            <span>항산화</span>
+          </div>
+          <p class="ic-desc">
+            비타민 A·C가 풍부해 피부 결을 정돈하고 탄력을 더해주는 식물성 오일.
+            BARRIER CREAM의 마무리감을 책임지는 핵심 오일입니다.
+          </p>
+          <div class="ic-foot">
+            <span class="ic-fit">민감성 적합도 ★★★★☆</span>
+            <a href="shop.html">제품 보기 →</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="ingredient-card" data-tags="soothing antioxidant">
+        <div class="ic-img"><img loading="lazy" decoding="async" src="images/toner-scene1.jpeg" alt="어성초 추출물"></div>
+        <div class="ic-body">
+          <span class="ic-number">No. 037</span>
+          <h3>어성초 추출물</h3>
+          <span class="ing-latin">Houttuynia Cordata Extract</span>
+          <div class="ic-role">
+            <span>진정</span>
+            <span>피부 컨디셔닝</span>
+          </div>
+          <p class="ic-desc">
+            예민하고 트러블이 잦은 피부를 진정시켜주는 전통 약초 성분.
+            VERDÉ TONER에 병풀과 함께 더해 진정 효과를 높였습니다.
+          </p>
+          <div class="ic-foot">
+            <span class="ic-fit">민감성 적합도 ★★★★★</span>
+            <a href="shop.html">제품 보기 →</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="ingredient-card" data-tags="antioxidant moisture">
+        <div class="ic-img"><img loading="lazy" decoding="async" src="images/lotion-scene1.jpeg" alt="올리브 잎 추출물"></div>
+        <div class="ic-body">
+          <span class="ic-number">No. 042</span>
+          <h3>올리브 잎 추출물</h3>
+          <span class="ing-latin">Olive Leaf Extract</span>
+          <div class="ic-role">
+            <span>항산화</span>
+            <span>보습</span>
+          </div>
+          <p class="ic-desc">
+            폴리페놀 성분이 풍부해 외부 자극으로부터 피부를 보호하고
+            유수분 밸런스를 잡아주는 성분. VERDÉ LOTION의 핵심 베이스입니다.
+          </p>
+          <div class="ic-foot">
+            <span class="ic-fit">민감성 적합도 ★★★★☆</span>
+            <a href="shop.html">제품 보기 →</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- FAQ -->
+    <div class="section-head center">
+      <span class="section-eyebrow">FAQ</span>
+      <h2 class="section-title">성분에 대해 자주 묻는 질문</h2>
+      <p class="section-desc">
+        고객 문의 데이터를 바탕으로 가장 많이 들어오는 성분 관련 질문을
+        먼저 정리했습니다.
+      </p>
+    </div>
+
+    <div class="accordion" style="max-width: 760px; margin: 0 auto;">
+      <div class="accordion-item open">
+        <div class="accordion-header">
+          이 성분이 민감성 피부에 괜찮을까요?
+          <span class="icon">+</span>
+        </div>
+        <div class="accordion-body">
+          <p>
+            VERDÉ 전 제품은 병풀, 판테놀 등 진정 성분을 중심으로 설계되어
+            민감성 피부 적합도 평균 4.5/5 이상입니다. 각 제품 상세페이지의
+            "민감성 적합도" 항목과 전성분표를 함께 확인해보세요.
+          </p>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <div class="accordion-header">
+          임산부·수유부도 사용 가능한가요?
+          <span class="icon">+</span>
+        </div>
+        <div class="accordion-body">
+          <p>
+            대부분의 성분은 사용 가능하나, 개인의 피부 상태와 체질에 따라
+            다를 수 있습니다. 사용 전 패치 테스트를 권장하며, 자세한 사항은
+            전문의와 상담 후 사용해주세요.
+          </p>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <div class="accordion-header">
+          다른 브랜드의 active 성분과 함께 사용해도 되나요?
+          <span class="icon">+</span>
+        </div>
+        <div class="accordion-body">
+          <p>
+            VERDÉ 제품은 자극이 적은 진정·보습 성분 위주로 구성되어 있어
+            대부분의 제품과 함께 사용 가능합니다. 다만 고농도 산성 성분과
+            함께 사용할 경우 사용 순서를 나누어 적용하는 것을 권장합니다.
+          </p>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <div class="accordion-header">
+          성분 함량(%)은 어디서 확인할 수 있나요?
+          <span class="icon">+</span>
+        </div>
+        <div class="accordion-body">
+          <p>
+            각 제품 상세페이지의 "전성분표 &amp; 성분별 역할" 항목에서
+            함량 순서대로 확인할 수 있으며, 핵심 성분의 경우 별도 함량
+            정보를 함께 표기하고 있습니다.
+          </p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="logo">VERDÉ</div>
+        <p>Forest Recovery — 피부의 자생력을 믿는 클린 뷰티 브랜드. 덜어내는 것이 케어다.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Shop</h4>
+        <ul>
+          <li><a href="shop.html">전체 제품</a></li>
+          <li><a href="shop.html">토너 · 로션</a></li>
+          <li><a href="shop.html">앰플 · 크림</a></li>
+          <li><a href="shop.html">리필 전용관</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Brand</h4>
+        <ul>
+          <li><a href="brand.html">Brand Concept</a></li>
+          <li><a href="ingredient.html">성분 사전</a></li>
+          <li><a href="journal.html">Journal</a></li>
+          <li><a href="membership.html">Membership</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li>hello@verde.kr</li>
+          <li>Instagram @verde_skin</li>
+          <li>평일 10:00 – 17:00</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 VERDÉ. All rights reserved.</span>
+      <span>VERDÉ Co., Ltd. · Forest Recovery</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Filter pills (visual only)
+  document.querySelectorAll('.filter-pill').forEach(pill => {
+    pill.addEventListener('click', () => {
+      document.querySelectorAll('.filter-pill').forEach(p => p.classList.remove('active'));
+      pill.classList.add('active');
+      const filter = pill.dataset.filter;
+      document.querySelectorAll('.ingredient-card').forEach(card => {
+        if (filter === 'all' || card.dataset.tags.includes(filter)) {
+          card.style.display = '';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    });
+  });
+
+  // Accordion
+  document.querySelectorAll('.accordion-header').forEach(header => {
+    header.addEventListener('click', () => {
+      const item = header.parentElement;
+      const isOpen = item.classList.contains('open');
+      document.querySelectorAll('.accordion-item').forEach(i => i.classList.remove('open'));
+      if (!isOpen) item.classList.add('open');
+    });
+  });
+</script>
+
+<script src="js/main.js" defer></script>
+
+</body>
+</html>
